@@ -28,6 +28,7 @@ public class OnlinesimPriceParser {
     private HashMap<String, Double> getCountryPrice(String countryNumber) {
         HashMap<String,Double> result = new HashMap<>();
 
+        //TODO: set driver to silent mode
         WebDriver driver = new ChromeDriver();
 
         driver.get(PRICE_LIST_URL+"?country="+countryNumber+"&type=receive");
@@ -47,6 +48,7 @@ public class OnlinesimPriceParser {
     private HashMap<String, String> getCountryNumbersAndNames() {
         HashMap<String,String> result = new HashMap<>();
 
+        //TODO: set driver to silent mode
         WebDriver driver = new ChromeDriver();
 
         driver.get(PRICE_LIST_URL);

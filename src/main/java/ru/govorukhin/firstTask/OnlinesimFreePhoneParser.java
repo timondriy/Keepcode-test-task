@@ -24,6 +24,7 @@ public class OnlinesimFreePhoneParser {
     public OnlinesimFreePhoneParser() {
     }
 
+    //TODO: handle exceptions
     public HashMap<String,ArrayList<PhoneNumber>> getAllPhoneNumbers() throws JsonProcessingException {
         HashMap<String,ArrayList<PhoneNumber>> result = new HashMap<>();
 
@@ -48,6 +49,7 @@ public class OnlinesimFreePhoneParser {
         return result;
     }
 
+    //TODO: handle exceptions
     private ArrayList<Country> getCountryList() throws JsonProcessingException {
         String content = getJsonFromURL(FREE_COUNTRY_LIST_URL);
 
@@ -57,6 +59,7 @@ public class OnlinesimFreePhoneParser {
         return mapper.readValue(arrayNode.get("countries").toString(), new TypeReference<>() {});
     }
 
+    //TODO: handle exceptions
     private String getJsonFromURL (String URL) {
         StringBuilder result = null;
         try {

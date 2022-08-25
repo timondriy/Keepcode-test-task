@@ -1,7 +1,5 @@
 package ru.govorukhin.thirdTask;
 
-import java.net.InetSocketAddress;
-
 public class Simplify {
     void processTask(ChannelHandlerContext ctx) {
         InetSocketAddress lineAddress = new InetSocketAddress(getIpAddress(), getUdpPort());
